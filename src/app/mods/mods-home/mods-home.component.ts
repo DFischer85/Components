@@ -7,9 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModsHomeComponent implements OnInit {
 
+  showModal: boolean = false;
+
+  items = [
+    { 
+      title: 'Why is the sky blue',
+      content: ' Because of air'
+    },
+
+    {
+      title: 'What does an orange taste like?',
+      content: 'Like an orange'
+    }
+
+
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClick(){
+    this.showModal = !this.showModal;
   }
 
 }

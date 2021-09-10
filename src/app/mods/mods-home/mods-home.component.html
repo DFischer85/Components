@@ -1,1 +1,13 @@
-<p>mods-home works!</p>
+<app-divider>Modal Component</app-divider>
+<button class="ui button secondary" (click)="onClick()">Show Modal</button>
+<app-modal (close)="onClick()" *ngIf="showModal">
+    <div modalTitle>Modal!</div>
+    <p>
+        I am a Re-usable modal!
+    </p>
+    <ng-container modalFooter>
+        <button class="ui button secondary" (click)="onClick()">Close Me!</button>
+    </ng-container>
+</app-modal>
+<app-divider>According Component</app-divider>
+<app-accordion [items]="items"></app-accordion>
